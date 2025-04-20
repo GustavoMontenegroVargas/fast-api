@@ -1,8 +1,8 @@
-# python-pro
+# microsoft-python-pro
 
-[Add your project desciption here as same in pyproject.toml]
+This repo contains the working activities of Python Developer Professional Certificate by Microsoft.
 
-This is a template GitHub repo that you can use for starting your python development journey. Follow the instructions listed below to learn how to use it.
+Follow these instructions to configure your base development environment.
 
 Content:
 
