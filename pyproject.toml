@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python-pro"
+version = "0.1.0"
+description = "This repo contains the working activities of Python Developer Professional Certificate by Microsoft."
+authors = [
+    { name = "Gustavo Montenegro", email = "c.montenegro2402@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "mypy",
+    "flake8",
+    "ipykernel",
+]
+
+[tool.hatch.build]
+packages = [
+    "src",
+    "consts.py"
+]
