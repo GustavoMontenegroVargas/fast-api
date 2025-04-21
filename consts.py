@@ -1,1 +1,1 @@
-PROJET_NAME = "microsoft-python-pro"
+PROJECT_NAME = "microsoft-python-pro"
