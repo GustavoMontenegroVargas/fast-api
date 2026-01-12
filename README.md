@@ -1,8 +1,7 @@
-# python-pro
+# fast-api
 
-[Add your project desciption here as same in pyproject.toml]
-
-This is a template GitHub repo that you can use for starting your python development journey. Follow the instructions listed below to learn how to use it.
+This repo contains the working activities of Fast API course.
+Follow these instructions to configure your base development environment.
 
 Content:
 
@@ -74,7 +73,7 @@ You will notice that your repo's project name will be appear at the left side of
 In order to confirm the editable mode of your project, run the following:
 
 ```bash
-uv pip show project-name
+uv pip show fast-api
 ```
 
 The details of your project will be displayed as package. 

@@ -1,1 +1,1 @@
-PROJET_NAME = "python-pro"
+PROJECT_NAME = "fast-api"
