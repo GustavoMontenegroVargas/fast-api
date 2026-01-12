@@ -1,7 +1,6 @@
-# microsoft-python-pro
+# fast-api
 
-This repo contains the working activities of Python Developer Professional Certificate by Microsoft.
-
+This repo contains the working activities of Fast API course.
 Follow these instructions to configure your base development environment.
 
 Content:
@@ -74,7 +73,7 @@ You will notice that your repo's project name will be appear at the left side of
 In order to confirm the editable mode of your project, run the following:
 
 ```bash
-uv pip show project-name
+uv pip show fast-api
 ```
 
 The details of your project will be displayed as package. 
