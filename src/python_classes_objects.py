@@ -21,4 +21,96 @@ class Person:
     def work(self):
         return f"{self.name} está trabajando duro"
     
+#_____________
     
+# Creating a different class
+    
+class SalesforceModel:
+	#Class attribute
+	platform= "Einstein"
+
+	# __init__ definition | Initial object state
+	def __init__(self, model_name):
+	
+		# Intstance attributes
+		self.model_name = model_name
+		self.is_trained = False
+		self.score = None
+
+		# Local variables
+		temp_id = 99
+	
+		# Printing the local variable value
+		print(f"The value of the temp_id is {temp_id}")
+
+	def train(self):
+		self.is_trained = True
+		self.score = 0.85
+
+	# static method
+
+	@staticmethod
+	def is_high_performance(score):
+		if score > 0.8:
+			return True
+		else:
+			return False
+
+	# class method
+
+	@classmethod
+	def create_default(cls, name):
+		return cls(model_name = name)    
+
+#_____________
+
+# Creating the objects
+
+if __name__ == "__main__":
+    my_first_model = SalesforceModel(
+        model_name= "model_test_1"
+    )
+    print(f"Model name: {my_first_model.model_name}")
+    print(f"Type: {type(my_first_model)}")
+    print(f"Is this model trained?: {my_first_model.is_trained}")
+    print(f"Model score: {my_first_model.score}")
+
+    print("\n")
+    print("\n")
+
+    print(f"Training the model...")
+    my_first_model.train()
+    my_first_model.score = 0.76
+    print("Model Trained")
+
+    print("\n")
+    print("\n")
+
+    print(f"Is this model trained?: {my_first_model.is_trained}")
+    print(f"Model score: {my_first_model.score}")
+    print(f"Is this high performance?: {SalesforceModel.is_high_performance(my_first_model.score)}")
+
+    print("\n")
+    print("\n")
+
+    my_second_model = SalesforceModel.create_default(name="model_test_2")
+
+    print(f"Model name: {my_second_model.model_name}")
+    print(f"Type: {type(my_second_model)}")
+    print(f"Is this model trained?: {my_second_model.is_trained}")
+    print(f"Model score: {my_second_model.score}")
+
+    print("\n")
+    print("\n")
+
+    print(f"Training the model...")
+    my_second_model.train()
+    my_second_model.score = 0.86
+    print("Model Trained")
+
+    print("\n")
+    print("\n")
+
+    print(f"Is this model trained?: {my_second_model.is_trained}")
+    print(f"Model score: {my_second_model.score}")
+    print(f"Is this high performance?: {SalesforceModel.is_high_performance(my_second_model.score)}")
