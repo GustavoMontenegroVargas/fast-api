@@ -62,6 +62,38 @@ class SalesforceModel:
 	def create_default(cls, name):
 		return cls(model_name = name)    
 
+#___ Inheritance ___
+
+class EinsteinService:
+	def __init__(self, service_id):
+		self.service_id = service_id
+	
+class ChatbotService(EinsteinService):
+	def __init__(self, service_id, language):
+		super().__init__(service_id) #Esta línea de código es lo que hace que los valores del padre se ejecuten.
+		self.language = language
+		
+	def status(self):
+		print(f"Service {self.service_id} is running in {self.language}")
+
+#___ Encapsulamiento ___
+
+class SalesforceModelEncapsulado:
+    def __init__(self, lr):
+        self.__learning_rate = lr  # Atributo PRIVADO
+        self.is_trained = False    # Atributo PÚBLICO
+
+    def set_learning_rate(self, new_lr):
+        """Puerta controlada para cambiar el dato"""
+        if 0 < new_lr < 1:
+            self.__learning_rate = new_lr
+            print(f"LR actualizado a {new_lr}")
+        else:
+            print("Error: Valor de LR inválido")
+
+    def get_lr(self):
+        return self.__learning_rate
+
 #_____________
 
 # Creating the objects
@@ -114,3 +146,14 @@ if __name__ == "__main__":
     print(f"Is this model trained?: {my_second_model.is_trained}")
     print(f"Model score: {my_second_model.score}")
     print(f"Is this high performance?: {SalesforceModel.is_high_performance(my_second_model.score)}")
+    
+    print("\n")
+    print("\n")
+    
+    print("Inheritance")
+    my_first_chatbit_service = ChatbotService(service_id="999", language="English")
+    print(f"Service ID: {my_first_chatbit_service.service_id}")
+    print(f"Language: {my_first_chatbit_service.language}")
+    my_first_chatbit_service.status()
+    print("\n")
+    print("\n")
